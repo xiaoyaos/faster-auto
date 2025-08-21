@@ -11,8 +11,7 @@ const path_1 = __importDefault(require("path"));
 async function init() {
     console.log(chalk_1.default.blue('🚀 faster-auto 初始化'));
     const projectName = process.argv.slice(2)[0];
-    // const template = 'github:username/faster-auto/template'
-    const template = 'github:xiaoyaos/access-engine/tests';
+    const template = 'github:xiaoyaos/faster-auto/template';
     const targetDir = path_1.default.resolve(process.cwd(), projectName);
     // 2. 检查目录是否已存在
     if (fs_1.default.existsSync(targetDir)) {
