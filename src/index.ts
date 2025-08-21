@@ -20,6 +20,7 @@ export interface FastlyOptions {
     password: string;
     database: string;
   };
+  tablePrefix?: string;
   apiPrefix?: string;
   swagger?: boolean;
   redoc?: boolean;
@@ -32,7 +33,7 @@ export function Faster(options: FastlyOptions) {
 
   const apiPrefix = options.apiPrefix || '/api';
   const sequelize = new Sequelize({ ...options.db, logging: false });
-  const models = loadJsonModels(options.modelDir, sequelize);
+  const models = loadJsonModels(options.modelDir, sequelize, options.tablePrefix);
   createApiRoutes(app, models, apiPrefix);
   sequelize.sync();
 

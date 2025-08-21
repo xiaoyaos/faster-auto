@@ -4,7 +4,7 @@ import { DataTypes, ModelStatic, Sequelize } from 'sequelize';
 import { SnowflakeId } from '../util/SnowflakeId';
 import { getAllModels, registerModel } from './modelRegistry';
 SnowflakeId.init(1000000000)
-export function loadJsonModels(modelDir: string, sequelize: Sequelize): Record<string, ModelStatic<any>> {
+export function loadJsonModels(modelDir: string, sequelize: Sequelize, tablePrefix: string = 'tb_faster_auto_'): Record<string, ModelStatic<any>> {
   const models: Record<string, ModelStatic<any>> = {};
   const absDir = path.resolve(process.cwd(), modelDir);
 
@@ -38,7 +38,7 @@ export function loadJsonModels(modelDir: string, sequelize: Sequelize): Record<s
     }
 
     models[schema.title] = sequelize.define(schema.title, attrs, {
-      tableName: `tb_faster_auto_${schema.title.toLowerCase()}`,
+      tableName: `${tablePrefix}${schema.title.toLowerCase()}`,
       timestamps: true
     });
     registerModel(schema.title, models[schema.title]);

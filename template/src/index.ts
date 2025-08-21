@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { Faster, Models } from 'faster-auto';
+import { Faster } from 'faster-auto';
 import path from 'path';
 
 const app = Faster({
@@ -15,7 +15,8 @@ const app = Faster({
   swagger: true,
   redoc: true,
   logStartupInfo: true,
-  apiPrefix:'/api'
+  apiPrefix:'/api',
+  tablePrefix: 'tb_faster_auto_'
 });
 app.listen(3000, () => {
   // console.log('http://localhost:3000');
@@ -25,4 +26,4 @@ app.get('/hello', (req: Request, res: Response) => {
   res.send('Hello Faster Auto!');
 });
 
-Models.User.findAll().then((user) => { console.log(user) });
+// Models.User.findAll().then((user) => { console.log(user) });
