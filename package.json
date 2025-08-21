@@ -1,10 +1,10 @@
 {
   "name": "faster-auto",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "rm -rf dist/* && tsc"
+    "build": "rm -rf dist/* && tsc && chmod +x dist/src/bin/index.js"
   },
   "bin": {
     "faster-auto": "dist/src/bin/index.js"
