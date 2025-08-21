@@ -19,6 +19,8 @@
 
 ```bash
 npm install faster-auto
+
+npx faster-auto my-app
 ```
 
 ---
@@ -150,16 +152,6 @@ Faster({
 
 ---
 
-## 📦 导出模型手动使用
-
-```ts
-import { Models } from 'faster-auto';
-
-const user = await Models.User.findOne({ where: { id: 1 } });
-```
-
----
-
 ## 📤 自动生成的接口
 
 假设有一个模型 `user`，将自动生成以下接口：
@@ -176,7 +168,7 @@ const user = await Models.User.findOne({ where: { id: 1 } });
 
 ## 💡 TODO 计划
 
-- [ ] 支持自定义API
+- [x] 支持自定义API
 - [x] 模型字段中文文档描述提取  
 - [ ] 支持 GraphQL 自动生成  
 - [ ] 自动生成 Markdown 接口文档  
@@ -194,7 +186,7 @@ const user = await Models.User.findOne({ where: { id: 1 } });
 
 ## 🧑‍💻 作者
 
-[@yao xiao](https://github.com/your-github)  
+[@yao xiao](https://github.com/xiaoyaos)  
 开源、自由、极简主义者  
 
 ---

@@ -1,3 +1,4 @@
+import { Request, Response } from 'express';
 import { Faster, Models } from 'faster-auto';
 import path from 'path';
 
@@ -19,4 +20,8 @@ app.listen(3000, () => {
   // console.log('http://localhost:3000');
 });
 
-Models.User.findAll().then((user) => {console.log(user)});
+app.get('/hello', (req: Request, res: Response) => {
+  res.send('Hello Faster Auto!');
+});
+
+Models.User.findAll().then((user) => { console.log(user) });

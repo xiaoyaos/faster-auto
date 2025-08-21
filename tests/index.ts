@@ -1,7 +1,9 @@
+import { Request, Response } from 'express';
+import path from 'path';
 import { Faster, Models } from '../src';
 
 const app = Faster({
-  modelDir: './models',
+  modelDir: path.join(__dirname, 'models'),
   db: {
     dialect: 'postgres',
     host: 'localhost',
@@ -16,6 +18,10 @@ const app = Faster({
 });
 app.listen(3000, () => {
   // console.log('http://localhost:3000');
+});
+
+app.get('/hello', (req: Request, res: Response) => {
+  res.send('Hello Faster Auto!');
 });
 
 Models.User.findAll().then((user) => {console.log(user)});
