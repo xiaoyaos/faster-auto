@@ -1,7 +1,8 @@
 import { Faster, Models } from 'faster-auto';
+import path from 'path';
 
 const app = Faster({
-  modelDir: './models',
+  modelDir: path.join(__dirname, 'models'),
   db: {
     dialect: 'postgres',
     host: 'localhost',
