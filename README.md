@@ -136,10 +136,7 @@ Faster({
   swagger: true,              // 启用 swagger
   redoc: true,                // 启用 redoc
   logStartupInfo: true,       // 启动时打印 API 地址
-  // onModelsLoaded(models) {    // 自定义模型 hook（如添加关联）
-  //   models.User.hasMany(models.Post);
-  //   models.Post.belongsTo(models.User);
-  // }
+  apiPrefix:'/api'
 });
 ```
 

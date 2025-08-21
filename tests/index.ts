@@ -14,7 +14,8 @@ const app = Faster({
   },
   swagger: true,
   redoc: true,
-  logStartupInfo: true
+  logStartupInfo: true,
+  apiPrefix:'/api/v1'
 });
 app.listen(3000, () => {
   // console.log('http://localhost:3000');
