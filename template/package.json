@@ -18,6 +18,6 @@
     "@types/express": "^5.0.3"
   },
   "dependencies": {
-    "faster-auto": "^0.0.1"
+    "faster-auto": "^0.0.8"
   }
 }
