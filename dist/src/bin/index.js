@@ -35,6 +35,7 @@ async function init() {
       启动开发:
         npm run dev
     `));
+        process.exit(0);
     }
     catch (error) {
         console.error(chalk_1.default.red('❌ 创建失败:', error.message));
