@@ -1,0 +1,26 @@
+{
+  "title": "Class",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-primaryKey": true,
+      "x-autoIncrement": true,
+      "x-snowflake": true
+    },
+    "age": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string",
+      "default": "Math"
+    }
+  },
+  "required": [
+    "name",
+    "age"
+  ]
+}

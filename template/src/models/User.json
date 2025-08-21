@@ -1,0 +1,29 @@
+{
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "x-primaryKey": true
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "class": {
+      "type": "string",
+      "x-references": {
+        "model": "Class",
+        "key": "id"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "username",
+    "email"
+  ]
+}
