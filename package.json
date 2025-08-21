@@ -1,7 +1,7 @@
 {
   "name": "faster-auto",
-  "version": "0.0.8",
-  "description": "",
+  "version": "0.0.9",
+  "description": "A fast and lightweight framework for building RESTful APIs with Sequelize and Node.js. Supports automatic model loading, flexible query APIs, and built-in Swagger documentation.",
   "main": "dist/src/index.js",
   "scripts": {
     "build": "rm -rf dist/* && tsc && chmod +x dist/src/bin/index.js"
@@ -35,5 +35,31 @@
     "redoc-express": "^2.1.0",
     "sequelize": "^6.37.7",
     "swagger-ui-express": "^5.0.1"
-  }
+  },
+  "keywords": [
+    "faster-auto",
+    "fastly-auto",
+    "sequelize",
+    "sequelize-models",
+    "sequelize-cli",
+    "nodejs",
+    "express",
+    "api",
+    "rest-api",
+    "crud",
+    "auto-crud",
+    "orm",
+    "swagger",
+    "swagger-docs",
+    "openapi",
+    "postgresql",
+    "mysql",
+    "sqlite",
+    "fast-api",
+    "backend",
+    "framework",
+    "low-code",
+    "rapid-development",
+    "api-generator"
+  ]
 }
