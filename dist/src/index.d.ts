@@ -9,6 +9,7 @@ export interface FastlyOptions {
         password: string;
         database: string;
     };
+    tablePrefix?: string;
     apiPrefix?: string;
     swagger?: boolean;
     redoc?: boolean;

@@ -20,7 +20,7 @@ function Faster(options) {
     app.use(express_1.default.json());
     const apiPrefix = options.apiPrefix || '/api';
     const sequelize = new sequelize_1.Sequelize({ ...options.db, logging: false });
-    const models = (0, loader_1.loadJsonModels)(options.modelDir, sequelize);
+    const models = (0, loader_1.loadJsonModels)(options.modelDir, sequelize, options.tablePrefix);
     (0, api_1.createApiRoutes)(app, models, apiPrefix);
     sequelize.sync();
     if (options.swagger) {

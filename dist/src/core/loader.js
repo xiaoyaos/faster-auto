@@ -10,7 +10,7 @@ const sequelize_1 = require("sequelize");
 const SnowflakeId_1 = require("../util/SnowflakeId");
 const modelRegistry_1 = require("./modelRegistry");
 SnowflakeId_1.SnowflakeId.init(1000000000);
-function loadJsonModels(modelDir, sequelize) {
+function loadJsonModels(modelDir, sequelize, tablePrefix = 'tb_faster_auto_') {
     const models = {};
     const absDir = path_1.default.resolve(process.cwd(), modelDir);
     for (const file of fs_1.default.readdirSync(absDir)) {
@@ -43,7 +43,7 @@ function loadJsonModels(modelDir, sequelize) {
             };
         }
         models[schema.title] = sequelize.define(schema.title, attrs, {
-            tableName: `tb_faster_auto_${schema.title.toLowerCase()}`,
+            tableName: `${tablePrefix}${schema.title.toLowerCase()}`,
             timestamps: true
         });
         (0, modelRegistry_1.registerModel)(schema.title, models[schema.title]);
