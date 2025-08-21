@@ -14,7 +14,8 @@
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "@types/express": "^5.0.3"
   },
   "dependencies": {
     "faster-auto": "^0.0.1"
