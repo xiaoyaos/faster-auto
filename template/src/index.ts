@@ -1,4 +1,4 @@
-import { Faster, Models } from '../src';
+import { Faster, Models } from 'faster-auto';
 
 const app = Faster({
   modelDir: './models',
